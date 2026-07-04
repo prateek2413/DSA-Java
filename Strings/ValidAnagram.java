@@ -9,11 +9,9 @@ class Solution {
         hm.put(s.charAt(i), hm.getOrDefault(s.charAt(i),0)+1);
         hmt.put(t.charAt(i), hmt.getOrDefault(t.charAt(i),0)+1);
        }
-       for(int i=0;i<s.length();i++){
-        if(!hm.get(s.charAt(i)).equals(hmt.get(s.charAt(i)))){
-            return false;
-        }
+       if(hm.equals(hmt)){
+        return true;
        }
-       return true;
+       return false;
     }
 }
