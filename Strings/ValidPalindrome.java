@@ -1,3 +1,4 @@
+//This soution has time complexity of O(n) because we are creating new string 
 class Solution {
     public boolean isPalindrome(String s) {
         boolean ans=true;
@@ -14,4 +15,12 @@ class Solution {
         }
         return ans;
     }
+}
+
+// if we add this in while loop we not longer need to create a string
+while (left < right && !Character.isLetterOrDigit(a.charAt(left))) {
+    left++;
+}
+while (left < right && !Character.isLetterOrDigit(a.charAt(right))) {
+    right--;
 }
