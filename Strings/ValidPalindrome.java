@@ -18,9 +18,25 @@ class Solution {
 }
 
 // if we add this in while loop we not longer need to create a string
-while (left < right && !Character.isLetterOrDigit(a.charAt(left))) {
-    left++;
-}
-while (left < right && !Character.isLetterOrDigit(a.charAt(right))) {
-    right--;
+class Solution {
+    public boolean isPalindrome(String s) {
+        boolean ans=true;
+        int left=0;
+        int right=s.length()-1;
+        while(left<right){
+            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            }
+            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            }
+            if(Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))){
+                ans=false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        return ans;
+    }
 }
