@@ -1,3 +1,4 @@
+//Solution using HashMap
 class Solution {
     public int firstUniqChar(String s) {
         HashMap<Character, Integer> hm=new HashMap<>();
