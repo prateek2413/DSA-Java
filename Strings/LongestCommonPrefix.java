@@ -1,9 +1,12 @@
-
+package String;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 class Solution{
-    public String LongestCommonPrefix(String[] arr){
+    public String longestCommonPrefix(String[] arr){
+        if(arr.length==0){
+            return "";
+        }
         String prefix=arr[0];
         for(int i=1;i<arr.length;i++){
             while(!arr[i].startsWith(prefix)){
@@ -27,7 +30,7 @@ public class LongestCommonPrefix {
             arr[i]=br.readLine();
         }
         Solution sl=new Solution();
-        System.out.println(sl.LongestCommonPrefix(arr));
+        System.out.println(sl.longestCommonPrefix(arr));
         
     }
 }
